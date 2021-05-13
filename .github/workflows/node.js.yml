@@ -39,5 +39,5 @@ jobs:
       uses: actions/download-artifact@v2.0.9
       with:
         name: webpack artifacts
-        path: public/
+        path: public
     - run: npm test
