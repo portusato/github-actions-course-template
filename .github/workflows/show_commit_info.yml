@@ -1,5 +1,8 @@
 name: Show commit info
 
+env:
+  COMMIT_ID = ${{ github.event.head_commit.id }}
+  COMMIT _MSG = ${{ github.event.head_commit.message }}
 on:
   workflow_dispatch:
   
@@ -10,5 +13,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: print_info
       run: |
-        echo Last commit ID: ${{ github.event.head_commit.id }}
-        echo Last commit mesage: ${{ github.event.head_commit.message }}
+        echo Last commit ID: ${{ COMMIT_ID }}
+        echo Last commit mesage: ${{ COMMIT_MSG }}
