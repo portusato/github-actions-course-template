@@ -7,6 +7,7 @@ jobs:
   print_commit_info:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: print_info
       run: |
         echo Last commit ID: ${{ github.event.head_commit.id }}
