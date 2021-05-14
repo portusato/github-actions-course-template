@@ -1,12 +1,13 @@
 name: Show commit info
 
-on: workflow_dispatch
-  branches: main
+on:
+  workflow_dispatch:
   
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-  - name: print_info
-    run: |
-      echo Last commit ID: ${{ github.event.head_commit.id }}
-      echo Last commit mesage: ${{ github.event.head_commit.message }}
+  print_commit_info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print_info
+      run: |
+        echo Last commit ID: ${{ github.event.head_commit.id }}
+        echo Last commit mesage: ${{ github.event.head_commit.message }}
