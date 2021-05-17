@@ -1,8 +1,5 @@
 name: Show commit info
 
-env:
-  COMMIT_ID: ${{ github.event.head_commit.id }}
-  COMMIT _MSG: ${{ github.event.head_commit.message }}
 on:
   workflow_dispatch:
   
@@ -17,5 +14,4 @@ jobs:
       run: echo "$GITHUB_CONTEXT"
     - name: print_info
       run: |
-        echo Last commit ID: ${{ env.COMMIT_ID }}
-        echo Last commit mesage: ${{ env.COMMIT_MSG }}
+        echo Last commit ID: ${{ github.sha }}
