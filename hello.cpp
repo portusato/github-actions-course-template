@@ -1,6 +1,9 @@
 #include <iostream>
+#include <cstdio>
+#include <string.h>
 
 void print_and_increment(int i);
+bool IsPasswordOK(void);
 
 int main() {
     IsPasswordOK();
