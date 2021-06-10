@@ -42,8 +42,8 @@ void GetData(char *MFAddr) {
  
 int main()
 {
-    char pwd_ext[64]
-    GetData(pwd_ext)
+    char pwd_ext[64];
+    GetData(pwd_ext);
     rule_of_three o1{"abc"};
     std::cout << o1 << ' ';
     auto o2{ o1 }; // I. uses copy constructor
