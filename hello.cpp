@@ -34,6 +34,11 @@ class rule_of_three
  public:
     operator const char *() const { return cstring; } // accessor
 };
+
+void GetData(char *MFAddr) {
+    char pwd[64];
+    memset(pwd, 0, sizeof(pwd));
+}
  
 int main()
 {
