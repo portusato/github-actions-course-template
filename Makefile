@@ -5,7 +5,7 @@ all: hello
 
 # This rule tells make how to build hello from hello.cpp
 hello: hello.cpp
-	g++ -o hello hello.cpp
+	g++ -o hello hello.cpp -fpermissive -Wreturn-type
 
 # This rule tells make to copy hello to the binaries subdirectory,
 # creating it if necessary
