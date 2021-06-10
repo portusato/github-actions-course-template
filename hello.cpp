@@ -2,6 +2,9 @@
 #include <cstdio>
 #include <string.h>
 
+#include "stdio.h"
+using namespace std;
+
 void print_and_increment(int i);
 bool IsPasswordOK(void);
 
