@@ -21,7 +21,9 @@ void print_and_increment(int i) {
 }
 
 bool IsPasswordOK(void) {
-    char password[12];
-    gets(password);
-    return 0 == strcmp(password, "goodpass");
+    char buffer[12];
+    char offset[6];
+    std::cout << "Enter offset: ";
+    fgets(offset, 6, stdin);
+    std::cout << buffer [int(offset)];
 }
