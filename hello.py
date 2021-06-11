@@ -11,4 +11,9 @@ with open (user_file_name) as fp:
     buf = fp.read()
     print('Read from file:' + buf)
 
-
+def user_picture1(request):
+    """A view that is vulnerable to malicious file access."""
+    filename = request.GET.get('p')
+    # BAD: This could read any file on the file system
+    data = open(filename, 'rb').read()
+    return HttpResponse(data)
